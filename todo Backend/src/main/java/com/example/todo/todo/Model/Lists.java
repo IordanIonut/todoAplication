@@ -5,20 +5,24 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Entity
-@Builder
 @Data
-@Table(name = "tags")
+@Builder
+@Table(name = "lists")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Tags {
+public class Lists {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long tag_id;
+    private Long list_id;
     @NotNull(message = "Todo")
     @ManyToOne
     private Todos todo_id;
-    @NotNull(message = "Name")
-    private String name;
+    @NotNull(message = "Title")
+    private String title;
+    @NotNull(message = "Priority")
+    private String priority;
+    @NotNull(message = "Status")
+    private String status;
 }
