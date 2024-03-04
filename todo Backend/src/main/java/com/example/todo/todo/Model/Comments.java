@@ -21,7 +21,7 @@ public class Comments {
     @NotNull(message = "Todo")
     @ManyToOne
     private Todos todo_id;
-    @NotNull(message = "User")
+    @NotNull(message = "Users")
     @ManyToOne
     private Users user_id;
     @NotNull(message = "Text")

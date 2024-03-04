@@ -18,7 +18,7 @@ public class Todos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long todo_id;
-    @NotNull(message = "user_id")
+    @NotNull(message = "Users")
     @ManyToOne
     private Users user_id;
     @NotNull(message = "Date")
